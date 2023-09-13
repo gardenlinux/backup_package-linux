@@ -1,0 +1,5 @@
+email: "contact@gardenlinux.io"
+name: "Garden Linux Builder"
+distribution: gardenlinux
+version_suffix: gl0
+message: "Rebuild for Garden Linux."

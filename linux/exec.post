@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+set -e
+
+DEBIAN_FRONTEND=noninteractive sudo apt-get install --no-install-recommends -y python3-jinja2 kernel-wedge
+PYTHONDONTWRITEBYTECODE=1 make -f debian/rules debian/control-real || true

@@ -1,0 +1,22 @@
+diff -Naur a/debian/config/amd64/defines b/debian/config/amd64/defines
+--- a/debian/config/amd64/defines	2023-08-31 05:07:12.000000000 +0000
++++ b/debian/config/amd64/defines	2023-09-14 08:25:40.560045251 +0000
+@@ -1,7 +1,6 @@
+ [base]
+ featuresets:
+  none
+- rt
+ kernel-arch: x86
+
+ [build]
+diff -Naur a/debian/config/arm64/defines b/debian/config/arm64/defines
+--- a/debian/config/arm64/defines	2023-08-31 05:07:12.000000000 +0000
++++ b/debian/config/arm64/defines	2023-09-14 08:25:47.666945693 +0000
+@@ -4,7 +4,6 @@
+ kernel-arch: arm64
+ featuresets:
+  none
+- rt
+
+ [build]
+ image-file: arch/arm64/boot/Image

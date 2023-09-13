@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+set -exufo pipefail
+
+sudo apt-get update
+DEBIAN_FRONTEND=noninteractive sudo apt-get install --no-install-recommends -y \
+	bc \
+	binutils \
+	bison \
+	ca-certificates \
+	curl \
+	flex \
+	gcc \
+	libelf-dev \
+	libssl-dev \
+	make \
+	xz-utils \
+	;
+
+curl https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.4.tar.xz | xz -d | tar -x
+cd linux-6.4
+make defconfig
+make -j "$(nproc)"
